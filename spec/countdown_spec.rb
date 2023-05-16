@@ -15,6 +15,16 @@ describe 'LOOPS' do
     end
   end
 
+def countdown (n)
+  while n > 0 
+    puts "#{n} SECOND(S)!"
+    n -= 1
+  end
+   "HAPPY NEW YEAR!"
+end
+countdown
+
+
   describe '#countdown_with_sleep' do
     it 'should take at least 5 seconds to execute' do
       runtime = Benchmark.measure { countdown_with_sleep(5) }
@@ -23,3 +33,13 @@ describe 'LOOPS' do
   end
 
 end
+
+def countdown_with_sleep (n)
+  while n >0
+    puts "#{n} SECOND(S)!"
+    sleep(1)
+    n -=1
+  end
+  "HAPPY NEW YEAR!"
+end
+countdown_with_sleep
